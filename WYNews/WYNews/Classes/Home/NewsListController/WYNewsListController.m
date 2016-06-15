@@ -8,10 +8,11 @@
 
 #import "WYNewsListController.h"
 #import "WYNetworkManager.h"
+#import "WYNewsListModel.h"
 
 static NSString *simpleCell = @"simpleCell";
 @interface WYNewsListController ()<UITableViewDelegate, UITableViewDataSource>
-
+@property (nonatomic, strong) NSMutableArray <__kindof WYNewsListModel *> *newsList;
 @property (nonatomic, weak) UITableView *tableView;
 
 @end
@@ -30,20 +31,27 @@ static NSString *simpleCell = @"simpleCell";
 #pragma mark - loadData
 - (void)loadData{
         [[WYNetworkManager sharedManager] newsListWithChannel:@"T1348648517839" Start:0 completion:^(NSArray *newsList, NSError *error) {
-            NSLog(@"==> %@",newsList);
+            
+            // 1. 字典转模型
+          NSArray *list = [NSArray yy_modelArrayWithClass:[WYNewsListModel class] json:newsList];
+            
+            // 2. 记录模型数组
+            self.newsList = [NSMutableArray arrayWithArray:list];
+            // 3. 更新数据
+            [self.tableView reloadData];
         }];
 }
 
 
 #pragma mark - UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 20;
+    return self.newsList.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleCell forIndexPath:indexPath];
     
-    cell.textLabel.text = @(indexPath.row).description;
+    cell.textLabel.text = _newsList[indexPath.row].title;
     
     return cell;
 }
