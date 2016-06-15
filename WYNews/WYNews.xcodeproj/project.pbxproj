@@ -78,6 +78,7 @@
 		DC719A9F1D10FA47007A7F5A /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = DC719A8E1D10FA47007A7F5A /* UIWebView+AFNetworking.m */; };
 		DC719AA21D10FEA4007A7F5A /* WYHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC719AA11D10FEA4007A7F5A /* WYHomeViewController.m */; };
 		DC719AAE1D11017A007A7F5A /* WYNewsListController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC719AAD1D11017A007A7F5A /* WYNewsListController.m */; };
+		DC719AB11D110F65007A7F5A /* WYNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DC719AB01D110F65007A7F5A /* WYNetworkManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -229,6 +230,8 @@
 		DC719AA11D10FEA4007A7F5A /* WYHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYHomeViewController.m; sourceTree = "<group>"; };
 		DC719AAC1D11017A007A7F5A /* WYNewsListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYNewsListController.h; sourceTree = "<group>"; };
 		DC719AAD1D11017A007A7F5A /* WYNewsListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYNewsListController.m; sourceTree = "<group>"; };
+		DC719AAF1D110F65007A7F5A /* WYNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYNetworkManager.h; sourceTree = "<group>"; };
+		DC719AB01D110F65007A7F5A /* WYNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYNetworkManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -321,6 +324,8 @@
 			isa = PBXGroup;
 			children = (
 				DC7198001D10852E007A7F5A /* Additions */,
+				DC719AAF1D110F65007A7F5A /* WYNetworkManager.h */,
+				DC719AB01D110F65007A7F5A /* WYNetworkManager.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -652,6 +657,7 @@
 			files = (
 				DC719A941D10FA47007A7F5A /* AFURLSessionManager.m in Sources */,
 				DC7198211D10852E007A7F5A /* UIColor+CZAddition.m in Sources */,
+				DC719AB11D110F65007A7F5A /* WYNetworkManager.m in Sources */,
 				DC71981B1D10852E007A7F5A /* NSAttributedString+CZAdditon.m in Sources */,
 				DC719A471D10F616007A7F5A /* UIImageView+WebCache.m in Sources */,
 				DC719A661D10FA0D007A7F5A /* FMDatabasePool.m in Sources */,
