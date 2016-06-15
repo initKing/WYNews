@@ -7,7 +7,7 @@
 //
 
 #import "WYNewsListController.h"
-
+#import "WYNetworkManager.h"
 
 static NSString *simpleCell = @"simpleCell";
 @interface WYNewsListController ()<UITableViewDelegate, UITableViewDataSource>
@@ -23,6 +23,15 @@ static NSString *simpleCell = @"simpleCell";
     self.view.backgroundColor = [UIColor whiteColor];
     
     [self setupUI];
+    
+    [self loadData];
+}
+
+#pragma mark - loadData
+- (void)loadData{
+        [[WYNetworkManager sharedManager] newsListWithChannel:@"T1348648517839" Start:0 completion:^(NSArray *newsList, NSError *error) {
+            NSLog(@"==> %@",newsList);
+        }];
 }
 
 
