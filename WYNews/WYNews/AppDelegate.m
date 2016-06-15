@@ -17,13 +17,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+    [self setupAppearence];
     _window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
-    UITabBarController *tabCtl = [[UITabBarController alloc] init];
-    tabCtl.view.backgroundColor = [UIColor whiteColor];
+    Class cls = NSClassFromString(@"WYMainViewController");
     
-    
-    _window.rootViewController = tabCtl;
+    _window.rootViewController = [[cls alloc] init];
     
     [_window makeKeyAndVisible];
     
@@ -32,5 +31,8 @@
     return YES;
 }
 
+- (void)setupAppearence {
+    [UITabBar appearance].tintColor = [UIColor cz_colorWithHex:0xDF0000];
+}
 
 @end

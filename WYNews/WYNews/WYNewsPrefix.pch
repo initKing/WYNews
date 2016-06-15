@@ -6,10 +6,11 @@
 //  Copyright © 2016年 CrazyHacker. All rights reserved.
 //
 
-#ifndef __OBJC__
-
-#import <Masonry.h>
+#ifdef __OBJC__
 
 
-
+#import "Masonry.h"
+//#import <NSObject+YYModel.h>
+#import "CZAdditions.h"
+//#import "CZNetworkManager.h"
 #endif /* WYNewsPrefix_pch */
