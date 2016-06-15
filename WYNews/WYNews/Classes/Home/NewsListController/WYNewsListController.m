@@ -9,8 +9,11 @@
 #import "WYNewsListController.h"
 #import "WYNetworkManager.h"
 #import "WYNewsListModel.h"
+#import "WYNewsListCell.h"
+#import "UIImageView+WebCache.h"
 
 static NSString *simpleCell = @"simpleCell";
+static NSString *exeraCell = @"exeraCell";
 @interface WYNewsListController ()<UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong) NSMutableArray <__kindof WYNewsListModel *> *newsList;
 @property (nonatomic, weak) UITableView *tableView;
@@ -49,9 +52,36 @@ static NSString *simpleCell = @"simpleCell";
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleCell forIndexPath:indexPath];
+    // 1. 根据model的属性判断使用何种cell
+    WYNewsListModel *model = self.newsList[indexPath.row];
     
-    cell.textLabel.text = _newsList[indexPath.row].title;
+//    NSString *cellId = model.imgextra.count > 0 ? exeraCell : simpleCell;
+    NSString *cellId;
+    if (model.imgextra.count > 0) {
+        cellId = exeraCell;
+    } else {
+        cellId = simpleCell;
+    }
+    
+    // 2. 查询出队cell
+    WYNewsListCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId forIndexPath:indexPath];
+    
+    // 3. 设置cell的属性
+    cell.titleLabel.text = model.title;
+    cell.sourceLabel.text = model.source;
+    cell.replyCountLabel.text = @(model.replyCount).description;
+    
+    NSURL *imgURL = [NSURL URLWithString:model.imgsrc];
+    [cell.iconView sd_setImageWithURL:imgURL];
+    
+    // 设置多张图像
+    NSInteger index = 0;
+    for (NSDictionary *dict in model.imgextra) {
+       NSURL *extraImg = [NSURL URLWithString:dict[@"imgsrc"]];
+        UIImageView *iv = cell.iconViewSet[index++];
+        [iv sd_setImageWithURL:extraImg];
+        
+    }
     
     return cell;
 }
@@ -75,13 +105,15 @@ static NSString *simpleCell = @"simpleCell";
     }];
     
     // 3. 设置细节
-    tv.rowHeight = 100;
-    
+    tv.estimatedRowHeight = 100;
+    tv.rowHeight = UITableViewAutomaticDimension;
     // 4. 注册原型cell
-#warning TODO 替换cell
- //  [tv registerNib:[UINib nibWithNibName:@"" bundle:nil] forCellReuseIdentifier:simpleCell];
+
+   [tv registerNib:[UINib nibWithNibName:@"WYNewsNormalCell" bundle:nil] forCellReuseIdentifier:simpleCell];
    
-    [tv registerClass:[UITableViewCell class] forCellReuseIdentifier:simpleCell];
+    [tv registerNib:[UINib nibWithNibName:@"WYNewsExtraCell" bundle:nil] forCellReuseIdentifier:exeraCell];
+    
+
     
     // 5. 指定代理、数据源
     tv.delegate = self;

@@ -80,6 +80,9 @@
 		DC719AAE1D11017A007A7F5A /* WYNewsListController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC719AAD1D11017A007A7F5A /* WYNewsListController.m */; };
 		DC719AB11D110F65007A7F5A /* WYNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DC719AB01D110F65007A7F5A /* WYNetworkManager.m */; };
 		DC719AB41D112F53007A7F5A /* WYNewsListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DC719AB31D112F53007A7F5A /* WYNewsListModel.m */; };
+		DC719AB81D11344F007A7F5A /* WYNewsListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DC719AB61D11344F007A7F5A /* WYNewsListCell.m */; };
+		DC719AB91D11344F007A7F5A /* WYNewsNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC719AB71D11344F007A7F5A /* WYNewsNormalCell.xib */; };
+		DC719AC01D1135C9007A7F5A /* WYNewsExtraCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC719ABE1D1135C9007A7F5A /* WYNewsExtraCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -235,6 +238,10 @@
 		DC719AB01D110F65007A7F5A /* WYNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYNetworkManager.m; sourceTree = "<group>"; };
 		DC719AB21D112F53007A7F5A /* WYNewsListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYNewsListModel.h; sourceTree = "<group>"; };
 		DC719AB31D112F53007A7F5A /* WYNewsListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYNewsListModel.m; sourceTree = "<group>"; };
+		DC719AB51D11344F007A7F5A /* WYNewsListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYNewsListCell.h; sourceTree = "<group>"; };
+		DC719AB61D11344F007A7F5A /* WYNewsListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYNewsListCell.m; sourceTree = "<group>"; };
+		DC719AB71D11344F007A7F5A /* WYNewsNormalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WYNewsNormalCell.xib; sourceTree = "<group>"; };
+		DC719ABE1D1135C9007A7F5A /* WYNewsExtraCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WYNewsExtraCell.xib; path = ../../../../../WYNewsExtraCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -581,6 +588,10 @@
 		DC719AAB1D110118007A7F5A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DC719AB51D11344F007A7F5A /* WYNewsListCell.h */,
+				DC719AB61D11344F007A7F5A /* WYNewsListCell.m */,
+				DC719AB71D11344F007A7F5A /* WYNewsNormalCell.xib */,
+				DC719ABE1D1135C9007A7F5A /* WYNewsExtraCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -646,7 +657,9 @@
 				DC7197FA1D107E9E007A7F5A /* Podfile in Resources */,
 				DC053F731D0FF8E500F5C3F6 /* LaunchScreen.storyboard in Resources */,
 				DC7197FC1D107EAA007A7F5A /* Podfile.lock in Resources */,
+				DC719AC01D1135C9007A7F5A /* WYNewsExtraCell.xib in Resources */,
 				DC719A951D10FA47007A7F5A /* LICENSE in Resources */,
+				DC719AB91D11344F007A7F5A /* WYNewsNormalCell.xib in Resources */,
 				DC7197FE1D10812B007A7F5A /* about_hd@2x.png in Resources */,
 				DC053F701D0FF8E500F5C3F6 /* Assets.xcassets in Resources */,
 				DC719A621D10FA0D007A7F5A /* LICENSE.txt in Resources */,
@@ -670,6 +683,7 @@
 				DC719A451D10F616007A7F5A /* UIImage+MultiFormat.m in Sources */,
 				DC719A911D10FA47007A7F5A /* AFSecurityPolicy.m in Sources */,
 				DC71981A1D10852E007A7F5A /* NSArray+Log.m in Sources */,
+				DC719AB81D11344F007A7F5A /* WYNewsListCell.m in Sources */,
 				DC719A3E1D10F616007A7F5A /* SDWebImageDecoder.m in Sources */,
 				DC719A971D10FA47007A7F5A /* AFAutoPurgingImageCache.m in Sources */,
 				DC719A3D1D10F616007A7F5A /* SDWebImageCompat.m in Sources */,
