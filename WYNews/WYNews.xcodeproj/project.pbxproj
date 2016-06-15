@@ -79,6 +79,7 @@
 		DC719AA21D10FEA4007A7F5A /* WYHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC719AA11D10FEA4007A7F5A /* WYHomeViewController.m */; };
 		DC719AAE1D11017A007A7F5A /* WYNewsListController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC719AAD1D11017A007A7F5A /* WYNewsListController.m */; };
 		DC719AB11D110F65007A7F5A /* WYNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DC719AB01D110F65007A7F5A /* WYNetworkManager.m */; };
+		DC719AB41D112F53007A7F5A /* WYNewsListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DC719AB31D112F53007A7F5A /* WYNewsListModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -232,6 +233,8 @@
 		DC719AAD1D11017A007A7F5A /* WYNewsListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYNewsListController.m; sourceTree = "<group>"; };
 		DC719AAF1D110F65007A7F5A /* WYNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYNetworkManager.h; sourceTree = "<group>"; };
 		DC719AB01D110F65007A7F5A /* WYNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYNetworkManager.m; sourceTree = "<group>"; };
+		DC719AB21D112F53007A7F5A /* WYNewsListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYNewsListModel.h; sourceTree = "<group>"; };
+		DC719AB31D112F53007A7F5A /* WYNewsListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYNewsListModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -569,6 +572,8 @@
 		DC719AAA1D110118007A7F5A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DC719AB21D112F53007A7F5A /* WYNewsListModel.h */,
+				DC719AB31D112F53007A7F5A /* WYNewsListModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -719,6 +724,7 @@
 				DC719A321D10F616007A7F5A /* MASConstraint.m in Sources */,
 				DC719A651D10FA0D007A7F5A /* FMDatabaseAdditions.m in Sources */,
 				DC719AAE1D11017A007A7F5A /* WYNewsListController.m in Sources */,
+				DC719AB41D112F53007A7F5A /* WYNewsListModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
