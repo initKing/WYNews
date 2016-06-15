@@ -69,7 +69,14 @@ static NSString *exeraCell = @"exeraCell";
     // 3. 设置cell的属性
     cell.titleLabel.text = model.title;
     cell.sourceLabel.text = model.source;
-    cell.replyCountLabel.text = @(model.replyCount).description;
+    
+    if (model.replyCount >= 10000) {
+        cell.replyCountLabel.text = [NSString stringWithFormat:@"%@万跟帖",@(model.replyCount / 10000).description];
+    } else if (model.replyCount > 0 && model.replyCount < 10000){
+        cell.replyCountLabel.text = [NSString stringWithFormat:@"%@跟帖",@(model.replyCount).description];
+    } else {
+        cell.replyCountLabel.text = @"";
+    }
     
     NSURL *imgURL = [NSURL URLWithString:model.imgsrc];
     [cell.iconView sd_setImageWithURL:imgURL];
@@ -107,14 +114,13 @@ static NSString *exeraCell = @"exeraCell";
     // 3. 设置细节
     tv.estimatedRowHeight = 100;
     tv.rowHeight = UITableViewAutomaticDimension;
+    tv.separatorStyle = UITableViewCellSeparatorStyleNone;
     // 4. 注册原型cell
 
    [tv registerNib:[UINib nibWithNibName:@"WYNewsNormalCell" bundle:nil] forCellReuseIdentifier:simpleCell];
    
     [tv registerNib:[UINib nibWithNibName:@"WYNewsExtraCell" bundle:nil] forCellReuseIdentifier:exeraCell];
-    
 
-    
     // 5. 指定代理、数据源
     tv.delegate = self;
     tv.dataSource = self;
