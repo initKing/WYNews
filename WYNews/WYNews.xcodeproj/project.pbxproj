@@ -76,6 +76,8 @@
 		DC719A9D1D10FA47007A7F5A /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = DC719A8A1D10FA47007A7F5A /* UIProgressView+AFNetworking.m */; };
 		DC719A9E1D10FA47007A7F5A /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = DC719A8C1D10FA47007A7F5A /* UIRefreshControl+AFNetworking.m */; };
 		DC719A9F1D10FA47007A7F5A /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = DC719A8E1D10FA47007A7F5A /* UIWebView+AFNetworking.m */; };
+		DC719AA21D10FEA4007A7F5A /* WYHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC719AA11D10FEA4007A7F5A /* WYHomeViewController.m */; };
+		DC719AAE1D11017A007A7F5A /* WYNewsListController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC719AAD1D11017A007A7F5A /* WYNewsListController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -223,6 +225,10 @@
 		DC719A8C1D10FA47007A7F5A /* UIRefreshControl+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIRefreshControl+AFNetworking.m"; sourceTree = "<group>"; };
 		DC719A8D1D10FA47007A7F5A /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
 		DC719A8E1D10FA47007A7F5A /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
+		DC719AA01D10FEA4007A7F5A /* WYHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYHomeViewController.h; sourceTree = "<group>"; };
+		DC719AA11D10FEA4007A7F5A /* WYHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYHomeViewController.m; sourceTree = "<group>"; };
+		DC719AAC1D11017A007A7F5A /* WYNewsListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYNewsListController.h; sourceTree = "<group>"; };
+		DC719AAD1D11017A007A7F5A /* WYNewsListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYNewsListController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -294,7 +300,10 @@
 		DC053F7B1D0FF9EC00F5C3F6 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				DC053F7D1D0FF9EC00F5C3F6 /* 主页 */,
+				DC719AA91D110118007A7F5A /* NewsListController(新闻列表) */,
+				DC719AA81D110118007A7F5A /* DetailNewsController(新闻详情) */,
+				DC719AA01D10FEA4007A7F5A /* WYHomeViewController.h */,
+				DC719AA11D10FEA4007A7F5A /* WYHomeViewController.m */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -306,14 +315,6 @@
 				DC7198271D10E34A007A7F5A /* WYMainViewController.m */,
 			);
 			path = Main;
-			sourceTree = "<group>";
-		};
-		DC053F7D1D0FF9EC00F5C3F6 /* 主页 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "主页";
-			path = "../Main/主页";
 			sourceTree = "<group>";
 		};
 		DC7197FF1D10852E007A7F5A /* Tools */ = {
@@ -540,6 +541,40 @@
 			path = "UIKit+AFNetworking";
 			sourceTree = "<group>";
 		};
+		DC719AA81D110118007A7F5A /* DetailNewsController(新闻详情) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "DetailNewsController(新闻详情)";
+			path = DetailNewsController;
+			sourceTree = "<group>";
+		};
+		DC719AA91D110118007A7F5A /* NewsListController(新闻列表) */ = {
+			isa = PBXGroup;
+			children = (
+				DC719AAA1D110118007A7F5A /* Model */,
+				DC719AAB1D110118007A7F5A /* View */,
+				DC719AAC1D11017A007A7F5A /* WYNewsListController.h */,
+				DC719AAD1D11017A007A7F5A /* WYNewsListController.m */,
+			);
+			name = "NewsListController(新闻列表)";
+			path = NewsListController;
+			sourceTree = "<group>";
+		};
+		DC719AAA1D110118007A7F5A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DC719AAB1D110118007A7F5A /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -660,6 +695,7 @@
 				DC719A351D10F616007A7F5A /* MASViewAttribute.m in Sources */,
 				DC719A3C1D10F616007A7F5A /* SDImageCache.m in Sources */,
 				DC719A981D10FA47007A7F5A /* AFImageDownloader.m in Sources */,
+				DC719AA21D10FEA4007A7F5A /* WYHomeViewController.m in Sources */,
 				DC719A411D10F616007A7F5A /* SDWebImageManager.m in Sources */,
 				DC719A421D10F616007A7F5A /* SDWebImagePrefetcher.m in Sources */,
 				DC71981D1D10852E007A7F5A /* NSString+CZBase64.m in Sources */,
@@ -676,6 +712,7 @@
 				DC719A441D10F616007A7F5A /* UIImage+GIF.m in Sources */,
 				DC719A321D10F616007A7F5A /* MASConstraint.m in Sources */,
 				DC719A651D10FA0D007A7F5A /* FMDatabaseAdditions.m in Sources */,
+				DC719AAE1D11017A007A7F5A /* WYNewsListController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

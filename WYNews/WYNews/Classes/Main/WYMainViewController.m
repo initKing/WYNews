@@ -24,7 +24,7 @@
 
 - (void)setupChildViewController {
     NSArray *array = @[
-                       @{@"ctrlName": @"UIViewController", @"title":@"新闻", @"imgName":@"news"},
+                       @{@"ctrlName": @"WYHomeViewController", @"title":@"新闻", @"imgName":@"news"},
                        @{@"ctrlName":@"UIViewController", @"title":@"阅读", @"imgName":@"reader"},
                        @{@"ctrlName":@"UIViewController", @"title":@"视频", @"imgName":@"media"},
                        @{@"ctrlName":@"UIViewController", @"title":@"话题", @"imgName":@"bar"},

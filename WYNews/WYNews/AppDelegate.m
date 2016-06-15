@@ -20,8 +20,8 @@
     [self setupAppearence];
     _window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
-    Class cls = NSClassFromString(@"WYMainViewController");
-    
+   // Class cls = NSClassFromString(@"WYMainViewController");
+     Class cls = NSClassFromString(@"WYNewsListController");
     _window.rootViewController = [[cls alloc] init];
     
     [_window makeKeyAndVisible];
@@ -32,6 +32,7 @@
 }
 
 - (void)setupAppearence {
+    // 设置导航栏的外观颜色 - 尽可能早的使用 appearance 方法设置
     [UITabBar appearance].tintColor = [UIColor cz_colorWithHex:0xDF0000];
 }
 
