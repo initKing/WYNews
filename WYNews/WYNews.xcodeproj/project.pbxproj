@@ -11,6 +11,9 @@
 		DC053F681D0FF8E500F5C3F6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DC053F671D0FF8E500F5C3F6 /* AppDelegate.m */; };
 		DC053F701D0FF8E500F5C3F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC053F6F1D0FF8E500F5C3F6 /* Assets.xcassets */; };
 		DC053F731D0FF8E500F5C3F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC053F711D0FF8E500F5C3F6 /* LaunchScreen.storyboard */; };
+		DC35A95D1D12D3CB003551AB /* WYNewsBigImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC35A95C1D12D3CB003551AB /* WYNewsBigImageCell.xib */; };
+		DC35A95F1D12D6A7003551AB /* WYNewsHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC35A95E1D12D6A7003551AB /* WYNewsHeaderCell.xib */; };
+		DC35A9621D13066C003551AB /* UIImageView+CH_ImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC35A9611D13066C003551AB /* UIImageView+CH_ImageView.m */; };
 		DC7197FA1D107E9E007A7F5A /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = DC7197F91D107E9E007A7F5A /* Podfile */; };
 		DC7197FC1D107EAA007A7F5A /* Podfile.lock in Resources */ = {isa = PBXBuildFile; fileRef = DC7197FB1D107EAA007A7F5A /* Podfile.lock */; };
 		DC7197FE1D10812B007A7F5A /* about_hd@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC7197FD1D10812B007A7F5A /* about_hd@2x.png */; };
@@ -94,6 +97,10 @@
 		DC053F721D0FF8E500F5C3F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DC053F741D0FF8E500F5C3F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC053F821D1016D300F5C3F6 /* WYNewsPrefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WYNewsPrefix.pch; sourceTree = "<group>"; };
+		DC35A95C1D12D3CB003551AB /* WYNewsBigImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WYNewsBigImageCell.xib; sourceTree = "<group>"; };
+		DC35A95E1D12D6A7003551AB /* WYNewsHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WYNewsHeaderCell.xib; sourceTree = "<group>"; };
+		DC35A9601D13066C003551AB /* UIImageView+CH_ImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+CH_ImageView.h"; sourceTree = "<group>"; };
+		DC35A9611D13066C003551AB /* UIImageView+CH_ImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+CH_ImageView.m"; sourceTree = "<group>"; };
 		DC7197F91D107E9E007A7F5A /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		DC7197FB1D107EAA007A7F5A /* Podfile.lock */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile.lock; sourceTree = "<group>"; };
 		DC7197FD1D10812B007A7F5A /* about_hd@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "about_hd@2x.png"; sourceTree = "<group>"; };
@@ -336,6 +343,8 @@
 				DC7198001D10852E007A7F5A /* Additions */,
 				DC719AAF1D110F65007A7F5A /* WYNetworkManager.h */,
 				DC719AB01D110F65007A7F5A /* WYNetworkManager.m */,
+				DC35A9601D13066C003551AB /* UIImageView+CH_ImageView.h */,
+				DC35A9611D13066C003551AB /* UIImageView+CH_ImageView.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -592,6 +601,8 @@
 				DC719AB61D11344F007A7F5A /* WYNewsListCell.m */,
 				DC719AB71D11344F007A7F5A /* WYNewsNormalCell.xib */,
 				DC719ABE1D1135C9007A7F5A /* WYNewsExtraCell.xib */,
+				DC35A95C1D12D3CB003551AB /* WYNewsBigImageCell.xib */,
+				DC35A95E1D12D6A7003551AB /* WYNewsHeaderCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -655,6 +666,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC7197FA1D107E9E007A7F5A /* Podfile in Resources */,
+				DC35A95D1D12D3CB003551AB /* WYNewsBigImageCell.xib in Resources */,
 				DC053F731D0FF8E500F5C3F6 /* LaunchScreen.storyboard in Resources */,
 				DC7197FC1D107EAA007A7F5A /* Podfile.lock in Resources */,
 				DC719AC01D1135C9007A7F5A /* WYNewsExtraCell.xib in Resources */,
@@ -662,6 +674,7 @@
 				DC719AB91D11344F007A7F5A /* WYNewsNormalCell.xib in Resources */,
 				DC7197FE1D10812B007A7F5A /* about_hd@2x.png in Resources */,
 				DC053F701D0FF8E500F5C3F6 /* Assets.xcassets in Resources */,
+				DC35A95F1D12D6A7003551AB /* WYNewsHeaderCell.xib in Resources */,
 				DC719A621D10FA0D007A7F5A /* LICENSE.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -711,6 +724,7 @@
 				DC719A331D10F616007A7F5A /* MASConstraintMaker.m in Sources */,
 				DC719A4A1D10F616007A7F5A /* YYClassInfo.m in Sources */,
 				DC719A481D10F616007A7F5A /* UIView+WebCacheOperation.m in Sources */,
+				DC35A9621D13066C003551AB /* UIImageView+CH_ImageView.m in Sources */,
 				DC719A401D10F616007A7F5A /* SDWebImageDownloaderOperation.m in Sources */,
 				DC719A9F1D10FA47007A7F5A /* UIWebView+AFNetworking.m in Sources */,
 				DC7198281D10E34A007A7F5A /* WYMainViewController.m in Sources */,

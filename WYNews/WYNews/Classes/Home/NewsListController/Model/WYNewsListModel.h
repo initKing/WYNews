@@ -22,5 +22,6 @@
 @property (nonatomic, strong) NSArray *imgextra;
 /** 新闻来源*/
 @property (nonatomic, copy) NSString *source;
-
+@property (nonatomic, assign) BOOL imgType;
+@property (nonatomic, assign) BOOL hasHead;
 @end

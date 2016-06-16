@@ -20,7 +20,7 @@
         instance = [[self alloc] initWithBaseURL:baseUrl];
        
         // 设置解析格式
-        instance.responseSerializer.acceptableContentTypes = [[NSSet alloc] initWithObjects:@"application/xml", @"text/xml",@"text/html", nil];
+        instance.responseSerializer.acceptableContentTypes = [[NSSet alloc] initWithObjects:@"application/xml", @"text/xml",@"text/html",@"application/json", nil];
         
     });
     return instance;

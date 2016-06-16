@@ -7,18 +7,45 @@
 //
 
 #import "WYNewsListCell.h"
+#import "WYNewsListModel.h"
+#import "UIImageView+WebCache.h"
 
+@interface WYNewsListCell()
+@property (weak, nonatomic) IBOutlet UIImageView *iconView;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *sourceLabel;
+@property (weak, nonatomic) IBOutlet UILabel *replyCountLabel;
+@property (strong, nonatomic) IBOutletCollection(UIImageView) NSArray *iconViewSet;
+@property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
+
+@end
 @implementation WYNewsListCell
+- (void)setNewsModel:(WYNewsListModel *)newsModel {
+    _newsModel = newsModel;
+    // 3. 设置cell的属性
+    _titleLabel.text = _newsModel.title;
+    _sourceLabel.text = _newsModel.source;
+    
+    if (_newsModel.replyCount >= 10000) {
+        _replyCountLabel.text = [NSString stringWithFormat:@"%@万跟帖",@(_newsModel.replyCount / 10000).description];
+    } else if (_newsModel.replyCount > 0 && _newsModel.replyCount < 10000){
+        _replyCountLabel.text = [NSString stringWithFormat:@"%@跟帖",@(_newsModel.replyCount).description];
+    } else {
+        _replyCountLabel.text = @"";
+    }
+    
+    NSURL *imgURL = [NSURL URLWithString:_newsModel.imgsrc];
+    [_iconView sd_setImageWithURL:imgURL];
+    
+    // 设置多张图像
+    NSInteger index = 0;
+    for (NSDictionary *dict in _newsModel.imgextra) {
+        NSURL *extraImg = [NSURL URLWithString:dict[@"imgsrc"]];
+        UIImageView *iv = _iconViewSet[index++];
+        [iv sd_setImageWithURL:extraImg];
+        
+    }
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    // Initialization code
-}
-
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
 }
 
 @end

@@ -14,6 +14,9 @@
 
 static NSString *simpleCell = @"simpleCell";
 static NSString *exeraCell = @"exeraCell";
+static NSString *bigImageCell = @"bigImageCell";
+static NSString *headerCell = @"headerCell";
+
 @interface WYNewsListController ()<UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong) NSMutableArray <__kindof WYNewsListModel *> *newsList;
 @property (nonatomic, weak) UITableView *tableView;
@@ -55,40 +58,20 @@ static NSString *exeraCell = @"exeraCell";
     // 1. 根据model的属性判断使用何种cell
     WYNewsListModel *model = self.newsList[indexPath.row];
     
-//    NSString *cellId = model.imgextra.count > 0 ? exeraCell : simpleCell;
     NSString *cellId;
-    if (model.imgextra.count > 0) {
+    if (model.hasHead) {
+        cellId = headerCell;
+    } else if (model.imgType) {
+        cellId = bigImageCell;
+    } else if (model.imgextra > 0) {
         cellId = exeraCell;
     } else {
         cellId = simpleCell;
     }
-    
     // 2. 查询出队cell
     WYNewsListCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId forIndexPath:indexPath];
     
-    // 3. 设置cell的属性
-    cell.titleLabel.text = model.title;
-    cell.sourceLabel.text = model.source;
-    
-    if (model.replyCount >= 10000) {
-        cell.replyCountLabel.text = [NSString stringWithFormat:@"%@万跟帖",@(model.replyCount / 10000).description];
-    } else if (model.replyCount > 0 && model.replyCount < 10000){
-        cell.replyCountLabel.text = [NSString stringWithFormat:@"%@跟帖",@(model.replyCount).description];
-    } else {
-        cell.replyCountLabel.text = @"";
-    }
-    
-    NSURL *imgURL = [NSURL URLWithString:model.imgsrc];
-    [cell.iconView sd_setImageWithURL:imgURL];
-    
-    // 设置多张图像
-    NSInteger index = 0;
-    for (NSDictionary *dict in model.imgextra) {
-       NSURL *extraImg = [NSURL URLWithString:dict[@"imgsrc"]];
-        UIImageView *iv = cell.iconViewSet[index++];
-        [iv sd_setImageWithURL:extraImg];
-        
-    }
+    cell.newsModel = model;
     
     return cell;
 }
@@ -121,6 +104,10 @@ static NSString *exeraCell = @"exeraCell";
    
     [tv registerNib:[UINib nibWithNibName:@"WYNewsExtraCell" bundle:nil] forCellReuseIdentifier:exeraCell];
 
+        [tv registerNib:[UINib nibWithNibName:@"WYNewsBigImageCell" bundle:nil] forCellReuseIdentifier:bigImageCell];
+    
+    [tv registerNib:[UINib nibWithNibName:@"WYNewsHeaderCell" bundle:nil] forCellReuseIdentifier:headerCell];
+    
     // 5. 指定代理、数据源
     tv.delegate = self;
     tv.dataSource = self;

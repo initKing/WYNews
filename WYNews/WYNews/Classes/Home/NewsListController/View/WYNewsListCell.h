@@ -7,12 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class WYNewsListModel;
 @interface WYNewsListCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet UIImageView *iconView;
-@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
-@property (weak, nonatomic) IBOutlet UILabel *sourceLabel;
-@property (weak, nonatomic) IBOutlet UILabel *replyCountLabel;
-@property (strong, nonatomic) IBOutletCollection(UIImageView) NSArray *iconViewSet;
 
+/** 新闻数据模型 */
+@property (nonatomic, strong) WYNewsListModel *newsModel;
 @end
