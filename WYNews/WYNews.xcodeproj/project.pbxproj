@@ -17,6 +17,7 @@
 		DC35A96C1D1312AE003551AB /* WYNewsChannelView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC35A96B1D1312AE003551AB /* WYNewsChannelView.m */; };
 		DC35A96E1D131329003551AB /* WYNewsChannelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC35A96D1D131329003551AB /* WYNewsChannelView.xib */; };
 		DC35A9701D1316C9003551AB /* topic_news.json in Resources */ = {isa = PBXBuildFile; fileRef = DC35A96F1D1316C9003551AB /* topic_news.json */; };
+		DC35A9741D131CD1003551AB /* WYChannelModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DC35A9731D131CD1003551AB /* WYChannelModel.m */; };
 		DC7197FA1D107E9E007A7F5A /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = DC7197F91D107E9E007A7F5A /* Podfile */; };
 		DC7197FC1D107EAA007A7F5A /* Podfile.lock in Resources */ = {isa = PBXBuildFile; fileRef = DC7197FB1D107EAA007A7F5A /* Podfile.lock */; };
 		DC7197FE1D10812B007A7F5A /* about_hd@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC7197FD1D10812B007A7F5A /* about_hd@2x.png */; };
@@ -107,7 +108,9 @@
 		DC35A96A1D1312AE003551AB /* WYNewsChannelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYNewsChannelView.h; sourceTree = "<group>"; };
 		DC35A96B1D1312AE003551AB /* WYNewsChannelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYNewsChannelView.m; sourceTree = "<group>"; };
 		DC35A96D1D131329003551AB /* WYNewsChannelView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WYNewsChannelView.xib; sourceTree = "<group>"; };
-		DC35A96F1D1316C9003551AB /* topic_news.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = topic_news.json; sourceTree = "<group>"; };
+		DC35A96F1D1316C9003551AB /* topic_news.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = topic_news.json; path = ../Views/topic_news.json; sourceTree = "<group>"; };
+		DC35A9721D131CD1003551AB /* WYChannelModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYChannelModel.h; sourceTree = "<group>"; };
+		DC35A9731D131CD1003551AB /* WYChannelModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYChannelModel.m; sourceTree = "<group>"; };
 		DC7197F91D107E9E007A7F5A /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		DC7197FB1D107EAA007A7F5A /* Podfile.lock */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile.lock; sourceTree = "<group>"; };
 		DC7197FD1D10812B007A7F5A /* about_hd@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "about_hd@2x.png"; sourceTree = "<group>"; };
@@ -327,6 +330,7 @@
 		DC053F7B1D0FF9EC00F5C3F6 /* Home(首页控制器) */ = {
 			isa = PBXGroup;
 			children = (
+				DC35A9711D131C90003551AB /* Model */,
 				DC35A9691D1312AE003551AB /* Views(频道视图) */,
 				DC719AA91D110118007A7F5A /* NewsListController(新闻列表) */,
 				DC719AA81D110118007A7F5A /* DetailNewsController(新闻详情) */,
@@ -350,13 +354,22 @@
 		DC35A9691D1312AE003551AB /* Views(频道视图) */ = {
 			isa = PBXGroup;
 			children = (
-				DC35A96F1D1316C9003551AB /* topic_news.json */,
 				DC35A96A1D1312AE003551AB /* WYNewsChannelView.h */,
 				DC35A96B1D1312AE003551AB /* WYNewsChannelView.m */,
 				DC35A96D1D131329003551AB /* WYNewsChannelView.xib */,
 			);
 			name = "Views(频道视图)";
 			path = Views;
+			sourceTree = "<group>";
+		};
+		DC35A9711D131C90003551AB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DC35A96F1D1316C9003551AB /* topic_news.json */,
+				DC35A9721D131CD1003551AB /* WYChannelModel.h */,
+				DC35A9731D131CD1003551AB /* WYChannelModel.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		DC7197FF1D10852E007A7F5A /* Tools */ = {
@@ -727,6 +740,7 @@
 				DC719A3D1D10F616007A7F5A /* SDWebImageCompat.m in Sources */,
 				DC053F681D0FF8E500F5C3F6 /* AppDelegate.m in Sources */,
 				DC719A391D10F616007A7F5A /* View+MASAdditions.m in Sources */,
+				DC35A9741D131CD1003551AB /* WYChannelModel.m in Sources */,
 				DC719A921D10FA47007A7F5A /* AFURLRequestSerialization.m in Sources */,
 				DC7198201D10852E007A7F5A /* UIButton+CZAddition.m in Sources */,
 				DC719A9B1D10FA47007A7F5A /* UIButton+AFNetworking.m in Sources */,

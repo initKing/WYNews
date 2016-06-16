@@ -8,9 +8,12 @@
 
 #import "WYHomeViewController.h"
 #import "WYNewsChannelView.h"
+#import "WYChannelModel.h"
 
 @interface WYHomeViewController ()
 
+/** 频道模型数组 */
+@property (nonatomic, strong) NSArray <WYChannelModel *> *channelList;
 @end
 
 @implementation WYHomeViewController
@@ -22,9 +25,9 @@
     
 }
 
+#pragma mark - 搭建频道视图
 - (void)setupUI {
     
- 
     WYNewsChannelView *cv = [WYNewsChannelView initChannelView];
 //    self.automaticallyAdjustsScrollViewInsets = YES;
     [self.view addSubview:cv];
@@ -35,7 +38,14 @@
         make.height.mas_equalTo(38);
     }];
     
+    // load channel data
+    [self loadData];
     
-    
+}
+
+#pragma mark - 加载频道模型数组
+- (void)loadData {
+    NSArray *array = [WYChannelModel channelList];
+    _channelList = array;
 }
 @end
