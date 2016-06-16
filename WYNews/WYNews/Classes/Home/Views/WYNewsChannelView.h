@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class WYChannelModel;
 @interface WYNewsChannelView : UIView
+
+@property (nonatomic, strong) NSArray <WYChannelModel *> *channewList;
 + (instancetype)initChannelView;
 @end

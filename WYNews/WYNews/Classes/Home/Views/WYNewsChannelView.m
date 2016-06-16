@@ -7,6 +7,7 @@
 //
 
 #import "WYNewsChannelView.h"
+#import "WYChannelModel.h"
 
 @implementation WYNewsChannelView
 
@@ -15,4 +16,10 @@
     
     return [nib instantiateWithOwner:nil options:nil].lastObject;
 }
+
+- (void)setChannewList:(NSArray<WYChannelModel *> *)channewList {
+    _channewList = channewList;
+    
+}
+
 @end

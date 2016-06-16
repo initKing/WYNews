@@ -40,13 +40,13 @@
     
     // load channel data
     [self loadData];
-    
+    cv.channewList = self.channelList;
 }
 
 #pragma mark - 加载频道模型数组
 - (void)loadData {
     NSArray *array = [WYChannelModel channelList];
     _channelList = array;
-    NSLog(@"%@",array);
+
 }
 @end
