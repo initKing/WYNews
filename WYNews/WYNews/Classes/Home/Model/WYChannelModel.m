@@ -24,7 +24,11 @@
     NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:0 error:NULL];
     // 字典转模型
     NSArray *modelArray = [NSArray yy_modelArrayWithClass:[self class] json:dict[@"tList"]];
-    return modelArray;
+    
+    // 返回排序后的结果 - 升序
+   return [modelArray sortedArrayUsingComparator:^NSComparisonResult(WYChannelModel *obj1, WYChannelModel *obj2) {
+        return [obj1.tid compare:obj2.tid];
+    }];
 }
 
 @end
