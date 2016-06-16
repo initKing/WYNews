@@ -17,13 +17,25 @@
                         <constraint firstAttribute="height" constant="38" id="gWJ-Rg-g6e"/>
                     </constraints>
                 </scrollView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iy6-NW-VwK">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="navbar_right_more" translatesAutoresizingMaskIntoConstraints="NO" id="NCA-Ff-rnV">
+                    <rect key="frame" x="313" y="0.0" width="25" height="38"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="25" id="0El-lI-T7h"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="navbar_left_more" translatesAutoresizingMaskIntoConstraints="NO" id="o6U-VB-pSz">
+                    <rect key="frame" x="0.0" y="0.0" width="25" height="38"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="25" id="zio-GC-cWp"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iy6-NW-VwK">
                     <rect key="frame" x="338" y="0.0" width="38" height="38"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="38" id="DsT-Kt-WvQ"/>
                         <constraint firstAttribute="width" constant="38" id="mnI-AU-nKc"/>
                     </constraints>
-                    <state key="normal" title="Button"/>
+                    <state key="normal" image="channel_nav_plus"/>
                 </button>
             </subviews>
             <color key="backgroundColor" red="0.99215686274509807" green="0.99215686274509807" blue="0.99215686274509807" alpha="1" colorSpace="calibratedRGB"/>
@@ -32,12 +44,23 @@
                 <constraint firstAttribute="trailing" secondItem="Iy6-NW-VwK" secondAttribute="trailing" constant="-1" id="4Ig-hw-B0H"/>
                 <constraint firstItem="UpY-DL-iZy" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="BwN-Jt-EkA"/>
                 <constraint firstItem="UpY-DL-iZy" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="HHV-EH-GB1"/>
+                <constraint firstAttribute="bottom" secondItem="o6U-VB-pSz" secondAttribute="bottom" id="IPW-Vq-QJx"/>
+                <constraint firstAttribute="bottom" secondItem="NCA-Ff-rnV" secondAttribute="bottom" id="JMT-HS-Lbd"/>
                 <constraint firstItem="Iy6-NW-VwK" firstAttribute="leading" secondItem="UpY-DL-iZy" secondAttribute="trailing" id="X0U-vZ-pXp"/>
+                <constraint firstItem="NCA-Ff-rnV" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="dL1-xH-jec"/>
                 <constraint firstAttribute="bottom" secondItem="UpY-DL-iZy" secondAttribute="bottom" id="dfv-ec-Pwd"/>
+                <constraint firstItem="o6U-VB-pSz" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="wYG-Am-QOX"/>
+                <constraint firstItem="o6U-VB-pSz" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="xD5-kb-WIA"/>
+                <constraint firstItem="Iy6-NW-VwK" firstAttribute="leading" secondItem="NCA-Ff-rnV" secondAttribute="trailing" id="y4l-9D-vel"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="209.5" y="67"/>
         </view>
     </objects>
+    <resources>
+        <image name="channel_nav_plus" width="18" height="18"/>
+        <image name="navbar_left_more" width="45" height="36"/>
+        <image name="navbar_right_more" width="45" height="36"/>
+    </resources>
 </document>

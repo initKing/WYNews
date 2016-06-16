@@ -18,9 +18,24 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    
+    [self setupUI];
     
 }
 
-
+- (void)setupUI {
+    
+ 
+    WYNewsChannelView *cv = [WYNewsChannelView initChannelView];
+//    self.automaticallyAdjustsScrollViewInsets = YES;
+    [self.view addSubview:cv];
+    
+    [cv mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.left.equalTo(self.view);
+        make.top.equalTo(self.mas_topLayoutGuideBottom);
+        make.height.mas_equalTo(38);
+    }];
+    
+    
+    
+}
 @end
