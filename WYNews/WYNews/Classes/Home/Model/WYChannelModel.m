@@ -23,7 +23,7 @@
     // 反序列化
     NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:0 error:NULL];
     // 字典转模型
-    NSArray *modelArray = [NSArray yy_modelArrayWithClass:[self class] json:dict[@"object"]];
+    NSArray *modelArray = [NSArray yy_modelArrayWithClass:[self class] json:dict[@"tList"]];
     return modelArray;
 }
 

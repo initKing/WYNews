@@ -47,5 +47,6 @@
 - (void)loadData {
     NSArray *array = [WYChannelModel channelList];
     _channelList = array;
+    NSLog(@"%@",array);
 }
 @end
