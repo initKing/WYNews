@@ -10,7 +10,7 @@
 #import "WYNetworkManager.h"
 #import "WYNewsListModel.h"
 #import "WYNewsListCell.h"
-#import "UIImageView+WebCache.h"
+
 
 static NSString *simpleCell = @"simpleCell";
 static NSString *exeraCell = @"exeraCell";

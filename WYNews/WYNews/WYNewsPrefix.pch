@@ -12,5 +12,9 @@
 #import "Masonry.h"
 #import "NSObject+YYModel.h"
 #import "CZAdditions.h"
+/** 封装AFN */
 #import "WYNetworkManager.h"
+/** 封装SDWebImage */
+#import "UIImageView+CH_ImageView.h"
+
 #endif /* WYNewsPrefix_pch */
