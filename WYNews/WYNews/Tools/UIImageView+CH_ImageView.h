@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface UIImageView (CH_ImageView)
-+ (void)ch_setImageWithURLString:(NSString *)urlString;
+- (void)ch_setImageWithURLString:(NSString *)urlString;
 @end

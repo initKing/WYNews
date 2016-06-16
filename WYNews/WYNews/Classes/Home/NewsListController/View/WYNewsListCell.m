@@ -8,7 +8,7 @@
 
 #import "WYNewsListCell.h"
 #import "WYNewsListModel.h"
-#import "UIImageView+WebCache.h"
+#import "UIImageView+CH_ImageView.h"
 
 @interface WYNewsListCell()
 @property (weak, nonatomic) IBOutlet UIImageView *iconView;
@@ -34,18 +34,14 @@
         _replyCountLabel.text = @"";
     }
     
-    NSURL *imgURL = [NSURL URLWithString:_newsModel.imgsrc];
-    [_iconView sd_setImageWithURL:imgURL];
+    [_iconView ch_setImageWithURLString:_newsModel.imgsrc];
     
     // 设置多张图像
     NSInteger index = 0;
     for (NSDictionary *dict in _newsModel.imgextra) {
-        NSURL *extraImg = [NSURL URLWithString:dict[@"imgsrc"]];
-        UIImageView *iv = _iconViewSet[index++];
-        [iv sd_setImageWithURL:extraImg];
-        
+    
+        [_iconViewSet[index++] ch_setImageWithURLString:dict[@"imgsrc"]];
+        }
     }
-
-}
 
 @end

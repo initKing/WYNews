@@ -7,7 +7,14 @@
 //
 
 #import "UIImageView+CH_ImageView.h"
+#import "UIImageView+WebCache.h"
 
 @implementation UIImageView (CH_ImageView)
-
+- (void)ch_setImageWithURLString:(NSString *)urlString {
+    NSURL *url = [NSURL URLWithString:urlString];
+    if (url != nil) {
+        [self sd_setImageWithURL:url];
+    }
+    
+}
 @end
