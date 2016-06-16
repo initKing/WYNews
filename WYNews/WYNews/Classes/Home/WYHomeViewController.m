@@ -7,6 +7,7 @@
 //
 
 #import "WYHomeViewController.h"
+#import "WYNewsChannelView.h"
 
 @interface WYHomeViewController ()
 
@@ -17,6 +18,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
+    
+    
 }
 
 

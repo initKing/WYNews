@@ -14,6 +14,9 @@
 		DC35A95D1D12D3CB003551AB /* WYNewsBigImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC35A95C1D12D3CB003551AB /* WYNewsBigImageCell.xib */; };
 		DC35A95F1D12D6A7003551AB /* WYNewsHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC35A95E1D12D6A7003551AB /* WYNewsHeaderCell.xib */; };
 		DC35A9621D13066C003551AB /* UIImageView+CH_ImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC35A9611D13066C003551AB /* UIImageView+CH_ImageView.m */; };
+		DC35A96C1D1312AE003551AB /* WYNewsChannelView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC35A96B1D1312AE003551AB /* WYNewsChannelView.m */; };
+		DC35A96E1D131329003551AB /* WYNewsChannelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC35A96D1D131329003551AB /* WYNewsChannelView.xib */; };
+		DC35A9701D1316C9003551AB /* topic_news.json in Resources */ = {isa = PBXBuildFile; fileRef = DC35A96F1D1316C9003551AB /* topic_news.json */; };
 		DC7197FA1D107E9E007A7F5A /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = DC7197F91D107E9E007A7F5A /* Podfile */; };
 		DC7197FC1D107EAA007A7F5A /* Podfile.lock in Resources */ = {isa = PBXBuildFile; fileRef = DC7197FB1D107EAA007A7F5A /* Podfile.lock */; };
 		DC7197FE1D10812B007A7F5A /* about_hd@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC7197FD1D10812B007A7F5A /* about_hd@2x.png */; };
@@ -101,6 +104,10 @@
 		DC35A95E1D12D6A7003551AB /* WYNewsHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WYNewsHeaderCell.xib; sourceTree = "<group>"; };
 		DC35A9601D13066C003551AB /* UIImageView+CH_ImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+CH_ImageView.h"; sourceTree = "<group>"; };
 		DC35A9611D13066C003551AB /* UIImageView+CH_ImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+CH_ImageView.m"; sourceTree = "<group>"; };
+		DC35A96A1D1312AE003551AB /* WYNewsChannelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYNewsChannelView.h; sourceTree = "<group>"; };
+		DC35A96B1D1312AE003551AB /* WYNewsChannelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYNewsChannelView.m; sourceTree = "<group>"; };
+		DC35A96D1D131329003551AB /* WYNewsChannelView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WYNewsChannelView.xib; sourceTree = "<group>"; };
+		DC35A96F1D1316C9003551AB /* topic_news.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = topic_news.json; sourceTree = "<group>"; };
 		DC7197F91D107E9E007A7F5A /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		DC7197FB1D107EAA007A7F5A /* Podfile.lock */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile.lock; sourceTree = "<group>"; };
 		DC7197FD1D10812B007A7F5A /* about_hd@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "about_hd@2x.png"; sourceTree = "<group>"; };
@@ -311,30 +318,45 @@
 		DC053F7A1D0FF9EC00F5C3F6 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				DC053F7C1D0FF9EC00F5C3F6 /* Main */,
-				DC053F7B1D0FF9EC00F5C3F6 /* Home */,
+				DC053F7C1D0FF9EC00F5C3F6 /* Main(主控制器) */,
+				DC053F7B1D0FF9EC00F5C3F6 /* Home(首页控制器) */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
 		};
-		DC053F7B1D0FF9EC00F5C3F6 /* Home */ = {
+		DC053F7B1D0FF9EC00F5C3F6 /* Home(首页控制器) */ = {
 			isa = PBXGroup;
 			children = (
+				DC35A9691D1312AE003551AB /* Views(频道视图) */,
 				DC719AA91D110118007A7F5A /* NewsListController(新闻列表) */,
 				DC719AA81D110118007A7F5A /* DetailNewsController(新闻详情) */,
 				DC719AA01D10FEA4007A7F5A /* WYHomeViewController.h */,
 				DC719AA11D10FEA4007A7F5A /* WYHomeViewController.m */,
 			);
+			name = "Home(首页控制器)";
 			path = Home;
 			sourceTree = "<group>";
 		};
-		DC053F7C1D0FF9EC00F5C3F6 /* Main */ = {
+		DC053F7C1D0FF9EC00F5C3F6 /* Main(主控制器) */ = {
 			isa = PBXGroup;
 			children = (
 				DC7198261D10E34A007A7F5A /* WYMainViewController.h */,
 				DC7198271D10E34A007A7F5A /* WYMainViewController.m */,
 			);
+			name = "Main(主控制器)";
 			path = Main;
+			sourceTree = "<group>";
+		};
+		DC35A9691D1312AE003551AB /* Views(频道视图) */ = {
+			isa = PBXGroup;
+			children = (
+				DC35A96F1D1316C9003551AB /* topic_news.json */,
+				DC35A96A1D1312AE003551AB /* WYNewsChannelView.h */,
+				DC35A96B1D1312AE003551AB /* WYNewsChannelView.m */,
+				DC35A96D1D131329003551AB /* WYNewsChannelView.xib */,
+			);
+			name = "Views(频道视图)";
+			path = Views;
 			sourceTree = "<group>";
 		};
 		DC7197FF1D10852E007A7F5A /* Tools */ = {
@@ -668,10 +690,12 @@
 				DC7197FA1D107E9E007A7F5A /* Podfile in Resources */,
 				DC35A95D1D12D3CB003551AB /* WYNewsBigImageCell.xib in Resources */,
 				DC053F731D0FF8E500F5C3F6 /* LaunchScreen.storyboard in Resources */,
+				DC35A9701D1316C9003551AB /* topic_news.json in Resources */,
 				DC7197FC1D107EAA007A7F5A /* Podfile.lock in Resources */,
 				DC719AC01D1135C9007A7F5A /* WYNewsExtraCell.xib in Resources */,
 				DC719A951D10FA47007A7F5A /* LICENSE in Resources */,
 				DC719AB91D11344F007A7F5A /* WYNewsNormalCell.xib in Resources */,
+				DC35A96E1D131329003551AB /* WYNewsChannelView.xib in Resources */,
 				DC7197FE1D10812B007A7F5A /* about_hd@2x.png in Resources */,
 				DC053F701D0FF8E500F5C3F6 /* Assets.xcassets in Resources */,
 				DC35A95F1D12D6A7003551AB /* WYNewsHeaderCell.xib in Resources */,
@@ -689,6 +713,7 @@
 				DC719A941D10FA47007A7F5A /* AFURLSessionManager.m in Sources */,
 				DC7198211D10852E007A7F5A /* UIColor+CZAddition.m in Sources */,
 				DC719AB11D110F65007A7F5A /* WYNetworkManager.m in Sources */,
+				DC35A96C1D1312AE003551AB /* WYNewsChannelView.m in Sources */,
 				DC71981B1D10852E007A7F5A /* NSAttributedString+CZAdditon.m in Sources */,
 				DC719A471D10F616007A7F5A /* UIImageView+WebCache.m in Sources */,
 				DC719A661D10FA0D007A7F5A /* FMDatabasePool.m in Sources */,

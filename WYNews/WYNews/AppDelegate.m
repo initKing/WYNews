@@ -23,8 +23,8 @@
     [self setupAppearence];
     _window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
-   // Class cls = NSClassFromString(@"WYMainViewController");
-     Class cls = NSClassFromString(@"WYNewsListController");
+//    Class cls = NSClassFromString(@"WYMainViewController");
+     Class cls = NSClassFromString(@"WYHomeViewController");
     _window.rootViewController = [[cls alloc] init];
     
     [_window makeKeyAndVisible];
