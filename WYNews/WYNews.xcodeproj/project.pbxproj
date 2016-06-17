@@ -18,6 +18,7 @@
 		DC35A96E1D131329003551AB /* WYNewsChannelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC35A96D1D131329003551AB /* WYNewsChannelView.xib */; };
 		DC35A9701D1316C9003551AB /* topic_news.json in Resources */ = {isa = PBXBuildFile; fileRef = DC35A96F1D1316C9003551AB /* topic_news.json */; };
 		DC35A9741D131CD1003551AB /* WYChannelModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DC35A9731D131CD1003551AB /* WYChannelModel.m */; };
+		DC35A9771D132876003551AB /* WYNewsChannelLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = DC35A9761D132876003551AB /* WYNewsChannelLabel.m */; };
 		DC7197FA1D107E9E007A7F5A /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = DC7197F91D107E9E007A7F5A /* Podfile */; };
 		DC7197FC1D107EAA007A7F5A /* Podfile.lock in Resources */ = {isa = PBXBuildFile; fileRef = DC7197FB1D107EAA007A7F5A /* Podfile.lock */; };
 		DC7197FE1D10812B007A7F5A /* about_hd@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC7197FD1D10812B007A7F5A /* about_hd@2x.png */; };
@@ -111,6 +112,8 @@
 		DC35A96F1D1316C9003551AB /* topic_news.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = topic_news.json; path = ../Views/topic_news.json; sourceTree = "<group>"; };
 		DC35A9721D131CD1003551AB /* WYChannelModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYChannelModel.h; sourceTree = "<group>"; };
 		DC35A9731D131CD1003551AB /* WYChannelModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYChannelModel.m; sourceTree = "<group>"; };
+		DC35A9751D132876003551AB /* WYNewsChannelLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYNewsChannelLabel.h; sourceTree = "<group>"; };
+		DC35A9761D132876003551AB /* WYNewsChannelLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYNewsChannelLabel.m; sourceTree = "<group>"; };
 		DC7197F91D107E9E007A7F5A /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		DC7197FB1D107EAA007A7F5A /* Podfile.lock */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile.lock; sourceTree = "<group>"; };
 		DC7197FD1D10812B007A7F5A /* about_hd@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "about_hd@2x.png"; sourceTree = "<group>"; };
@@ -357,6 +360,8 @@
 				DC35A96A1D1312AE003551AB /* WYNewsChannelView.h */,
 				DC35A96B1D1312AE003551AB /* WYNewsChannelView.m */,
 				DC35A96D1D131329003551AB /* WYNewsChannelView.xib */,
+				DC35A9751D132876003551AB /* WYNewsChannelLabel.h */,
+				DC35A9761D132876003551AB /* WYNewsChannelLabel.m */,
 			);
 			name = "Views(频道视图)";
 			path = Views;
@@ -748,6 +753,7 @@
 				DC7198241D10852E007A7F5A /* UIView+CZAddition.m in Sources */,
 				DC719A461D10F616007A7F5A /* UIImageView+HighlightedWebCache.m in Sources */,
 				DC719A341D10F616007A7F5A /* MASLayoutConstraint.m in Sources */,
+				DC35A9771D132876003551AB /* WYNewsChannelLabel.m in Sources */,
 				DC719A931D10FA47007A7F5A /* AFURLResponseSerialization.m in Sources */,
 				DC71981E1D10852E007A7F5A /* NSString+CZHash.m in Sources */,
 				DC719A9A1D10FA47007A7F5A /* UIActivityIndicatorView+AFNetworking.m in Sources */,

@@ -20,6 +20,8 @@
 - (void)setChannewList:(NSArray<WYChannelModel *> *)channewList {
     _channewList = channewList;
     
+
+    
 }
 
 @end
