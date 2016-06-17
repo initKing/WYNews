@@ -13,6 +13,7 @@
 		DC35A98F1D13CED8003551AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC35A98D1D13CED8003551AB /* Main.storyboard */; };
 		DC35A9911D13CED8003551AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC35A9901D13CED8003551AB /* Assets.xcassets */; };
 		DC35A9941D13CED8003551AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC35A9921D13CED8003551AB /* LaunchScreen.storyboard */; };
+		DC35A99C1D13D72B003551AB /* itcast.json in Resources */ = {isa = PBXBuildFile; fileRef = DC35A99B1D13D72B003551AB /* itcast.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		DC35A9901D13CED8003551AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC35A9931D13CED8003551AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DC35A9951D13CED8003551AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC35A99B1D13D72B003551AB /* itcast.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = itcast.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				DC35A98B1D13CED8003551AB /* ViewController.m */,
 				DC35A98D1D13CED8003551AB /* Main.storyboard */,
 				DC35A9901D13CED8003551AB /* Assets.xcassets */,
+				DC35A99B1D13D72B003551AB /* itcast.json */,
 				DC35A9921D13CED8003551AB /* LaunchScreen.storyboard */,
 				DC35A9951D13CED8003551AB /* Info.plist */,
 				DC35A9841D13CED8003551AB /* Supporting Files */,
@@ -139,6 +142,7 @@
 				DC35A9941D13CED8003551AB /* LaunchScreen.storyboard in Resources */,
 				DC35A9911D13CED8003551AB /* Assets.xcassets in Resources */,
 				DC35A98F1D13CED8003551AB /* Main.storyboard in Resources */,
+				DC35A99C1D13D72B003551AB /* itcast.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
